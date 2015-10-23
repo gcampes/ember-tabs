@@ -1,0 +1,1 @@
+export { default } from 'ember-imdt-tabs/components/ember-imdt-tab-panel';

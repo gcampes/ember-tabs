@@ -1,3 +1,22 @@
 <h2 id="title">Welcome to Ember</h2>
 
+{{#ember-imdt-tab-panel}}
+    {{#ember-imdt-tab-pane label="Tab 1" name="tab1"}}Tab content 1{{/ember-imdt-tab-pane}}
+    {{#ember-imdt-tab-pane label="Tab 2" name="tab2"}}
+      <h1>Header</h1>
+      <h3>Sub-header</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    {{/ember-imdt-tab-pane}}
+    {{ember-imdt-tab-pane label="Tab 3" name="tab3" templateName="custom/tab"}}
+{{/ember-imdt-tab-panel}}
+
+
+{{#ember-imdt-tab-panel}}
+    {{#ember-imdt-tab-pane label="This tab has a big name for testing purposes" name="tab11"}}Tab content 1{{/ember-imdt-tab-pane}}
+    {{#ember-imdt-tab-pane label="Tab 2" name="tab12"}}Tab content 2{{/ember-imdt-tab-pane}}
+    {{ember-imdt-tab-pane label="Tab 3" name="tab13" templateName="custom/tab"}}
+{{/ember-imdt-tab-panel}}
+
 {{outlet}}

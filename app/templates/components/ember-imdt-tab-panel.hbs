@@ -1,0 +1,11 @@
+<ul class="ember-imdt-tabs-navigation" role="tablist">
+  {{#each tabs as |tab|}}
+      <li {{action "change" tab.name}} class="ember-imdt-tab {{if tab.active 'active'}}" data-tab-name={{tab.name}}>
+          <a role="tab">{{tab.label}}</a>
+      </li>
+  {{/each}}
+</ul>
+
+<div class="ember-imdt-tabs-content">
+  {{yield}}
+</div>

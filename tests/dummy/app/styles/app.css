@@ -1,0 +1,32 @@
+.ember-imdt-tabs{
+  margin-top: 15px;
+}
+
+.ember-imdt-tab{
+  font-family: sans-serif;
+  background-color: rgb(180, 180, 180);
+  padding: 5px 10px;
+}
+
+.ember-imdt-tab.active{
+  background-color: rgb(230, 230, 230);
+}
+
+.ember-imdt-tab-pane{
+  background-color: rgb(230, 230, 230);
+}
+
+h1, h3{
+  margin: 0px;
+}
+
+p{
+  text-align: justify;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
