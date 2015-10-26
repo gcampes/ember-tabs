@@ -9,7 +9,6 @@
   padding: 2px 5px;
   cursor: pointer;
   float: left;
-  transition: background-color 0.25s;
 }
 
 .ember-imdt-tab.active{

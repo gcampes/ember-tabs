@@ -13,10 +13,10 @@
 {{/ember-imdt-tab-panel}}
 
 
-{{#ember-imdt-tab-panel}}
-    {{#ember-imdt-tab-pane label="This tab has a big name for testing purposes" name="tab11"}}Tab content 1{{/ember-imdt-tab-pane}}
-    {{#ember-imdt-tab-pane label="Tab 2" name="tab12"}}Tab content 2{{/ember-imdt-tab-pane}}
-    {{ember-imdt-tab-pane label="Tab 3" name="tab13" templateName="custom/tab"}}
+{{#ember-imdt-tab-panel initialTabName="tab12"}}
+    {{#ember-imdt-tab-pane label="Tab One" name="tab11"}}Tab content 1{{/ember-imdt-tab-pane}}
+    {{#ember-imdt-tab-pane label="Tab Two" name="tab12"}}Tab content 2{{/ember-imdt-tab-pane}}
+    {{ember-imdt-tab-pane label="Tab Three" name="tab13" templateName="custom/tab"}}
 {{/ember-imdt-tab-panel}}
 
 {{outlet}}

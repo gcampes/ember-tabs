@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
+  classNames: ['ember-imdt-tabs'],
   activeTabName: null,
+  initialTabName: null,
 
   setupTabs: Ember.on(
     'didInsertElement',
