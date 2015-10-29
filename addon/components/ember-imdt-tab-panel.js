@@ -3,25 +3,27 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNames: ['ember-imdt-tabs'],
   activeTabName: null,
-  initialTabName: null,
 
+  /*
+  Set tabs, and select the initial tab
+  */
   setupTabs: Ember.on(
     'didInsertElement',
     function() {
-      let initialTabName = this.get('initialTabName');
+      let activeTabName = this.get('activeTabName');
       let tabs = new Ember.A();
 
-      if (!initialTabName) {
-          initialTabName = this
+      if (!activeTabName) {
+          activeTabName = this
               .$('.ember-imdt-tab-pane:first')
               .attr('data-tab-name');
       }
-      this.setActiveTab(initialTabName);
-      this.activatePane(initialTabName);
+      this.setActiveTab(activeTabName);
+      this.activatePane(activeTabName);
       this.$('.ember-imdt-tab-pane').each(function() {
           let tabName = this.getAttribute('data-tab-name');
           tabs.push({
-              active: tabName === initialTabName,
+              active: tabName === activeTabName,
               label: this.getAttribute('data-tab-label'),
               name: tabName
           });
@@ -30,14 +32,23 @@ export default Ember.Component.extend({
     }
   ),
 
+  /*
+  Return a pane by name
+  */
   paneByName(name){
     return this.$('.ember-imdt-tab-pane[data-tab-name="'+name+'"]');
   },
 
+  /*
+  Return a tab by name
+  */
   tabByName(name){
     return this.$('.ember-imdt-tab[data-tab-name="'+name+'"]');
   },
 
+  /*
+  Activate a pane
+  */
   activatePane(tabName){
     let pane = this.paneByName(tabName);
 
@@ -46,6 +57,9 @@ export default Ember.Component.extend({
     this.set('activeTabName', tabName);
   },
 
+  /*
+  Deactivate a pane
+  */
   deactivatePane(callback){
     let pane = this.paneByName(this.get('activeTabName'));
 
@@ -56,6 +70,9 @@ export default Ember.Component.extend({
     }
   },
 
+  /*
+  Set the active tab
+  */
   setActiveTab(tabName){
     const activeTabName = this.get('activeTabName');
 
@@ -64,6 +81,10 @@ export default Ember.Component.extend({
   },
 
   actions: {
+
+    /*
+    Change the active tab
+    */
     change(tabName){
         let activeTabName = this.get('activeTabName');
 
