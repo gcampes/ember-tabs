@@ -75,7 +75,7 @@ attribute | Description
 ----------|------------
 activeTabName | This set the active tab when the component is first rendered on the template
 
-##### tab-pane
+###### tab-pane
 attribute | Description
 ----------|------------
 label | This sets the tab name above the pane
