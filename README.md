@@ -65,7 +65,7 @@ All you need to do in order for the addon to display something is add the handle
 <!-- app/templates/custom/controllername -->
 {{foo}}
 ```
-With the above code, what would be displayed in the tab would be `bar`. This is a very simple example, just to show that the `controller` `tab` binding is possible.
+With the above code, what would be displayed in the tab would be `bar`. This is a very simple example, just to show that the `controller` and `tab` binding is possible.
 
 ##### Options
 
