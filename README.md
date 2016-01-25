@@ -5,9 +5,7 @@ These tabs are components, so you can add them on your application by installing
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* ember install ember-imdt-tabs
 
 ## Usage
 
